@@ -9,6 +9,10 @@
   <style>
     body { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; padding: 40px 20px; color: #047857; background: linear-gradient(135deg, #e9fff5 0%, #cffff1 45%, #eaffcb 100%); min-height: 100vh; margin: 0; box-sizing: border-box; display: flex; align-items: center; justify-content: center; }
     .card { max-width: 560px; width: 100%; background: rgba(255,255,255,0.55); backdrop-filter: blur(10px); border-radius: 18px; padding: 36px 30px; text-align: center; box-shadow: 0 12px 40px rgba(34,139,34,0.08); }
+    /* Korean defaults to breaking between any two syllables, which strands a
+       trailing one ("...정지했습니 / 다."). keep-all limits breaks to spaces, as in
+       Latin; overflow-wrap keeps a genuinely oversized token inside the card. */
+    body, .card { word-break: keep-all; overflow-wrap: break-word; text-wrap: pretty; }
     h1 { font-size: 28px; letter-spacing: -0.04em; margin: 0 0 6px; color: #047857; }
     .sub { color: #5a756c; font-weight: 700; margin: 0 0 28px; font-size: 15px; }
     .box { background: rgba(80,200,120,0.08); border-left: 4px solid #50C878; padding: 18px 22px; border-radius: 8px; margin: 20px 0; text-align: left; }
