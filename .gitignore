@@ -1,0 +1,3 @@
+# wrangler writes this on `pages deploy`; it caches the resolved Cloudflare
+# account, which belongs to whoever runs the deploy — not to the repo.
+.wrangler/
